@@ -12,6 +12,7 @@
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/bin/Debug/AdminPanel.exe.config
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/bin/Debug/AdminPanel.exe
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/bin/Debug/AdminPanel.pdb
+/Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/AdminPanel/obj/Debug/AdminPanel.csprojResolveAssemblyReference.cache
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/AdminPanel/obj/Debug/AdminPanel.exe.config
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/AdminPanel/obj/Debug/AdminPanel.AddItemForm.resources
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/AdminPanel/obj/Debug/AdminPanel.AdminPanel.resources
