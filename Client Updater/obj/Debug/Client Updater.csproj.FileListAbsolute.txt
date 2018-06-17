@@ -106,6 +106,7 @@
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/Client Updater/bin/Debug/MetroFramework.Design.dll
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/Client Updater/bin/Debug/MetroFramework.dll
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/Client Updater/bin/Debug/MetroFramework.Fonts.dll
+/Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/Client Updater/obj/Debug/Client Updater.csprojResolveAssemblyReference.cache
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/Client Updater/obj/Debug/Client_Updater.Form1.resources
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/Client Updater/obj/Debug/Client_Updater.Properties.Resources.resources
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/Client Updater/obj/Debug/Client Updater.csproj.GenerateResource.Cache
