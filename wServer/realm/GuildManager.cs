@@ -165,7 +165,7 @@ namespace wServer.realm
 
             else
                 foreach (Player p in this)
-                    p.SendInfo(sender.Name + " removed " + player.Name + " from " + Name);
+                    p.SendInfo(sender.Name + " kicked " + player.Name + " from " + Name);
 
             player.Guild = GetDefaultGuild();
             this.Remove(player);

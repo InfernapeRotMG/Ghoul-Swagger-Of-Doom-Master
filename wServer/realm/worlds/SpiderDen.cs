@@ -11,7 +11,7 @@ namespace wServer.realm.worlds
         public SpiderDen()
         {
             Name = "Spider Den";
-            ClientWorldName = "dungeons.Spider_Den";
+            ClientWorldName = "Spider Den";
             Background = 0;
             Difficulty = 2;
             AllowTeleport = true;

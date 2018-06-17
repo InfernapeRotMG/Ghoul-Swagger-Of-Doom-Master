@@ -16,7 +16,7 @@ namespace wServer.realm
 
     #endregion
 
-    public class NetworkTicker //Sync network processing
+    public class NetworkTicker
     {
         private static readonly ConcurrentQueue<Work> pendings = new ConcurrentQueue<Work>();
         private static SpinWait loopLock = new SpinWait();

@@ -1,9 +1,5 @@
-﻿#region
-
-using System;
+﻿using System;
 using wServer.realm.entities.player;
-
-#endregion
 
 namespace wServer.realm
 {

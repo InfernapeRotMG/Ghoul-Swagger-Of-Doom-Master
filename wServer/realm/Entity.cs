@@ -289,42 +289,6 @@ namespace wServer.realm
             return posHistory[(byte)(posIdx - 2)];
         }
 
-
-        /*
-         * ArenaGuard,
-         * ArenaPortal,
-         * CaveWall,
-         * Character,
-         * CharacterChanger,
-         * ClosedGiftChest,
-         * ClosedVaultChest,
-         * ConnectedWall,
-         * Container,
-         * DoubleWall,
-         * GameObject,
-         * GuildBoard,
-         * GuildChronicle,
-         * GuildHallPortal,
-         * GuildMerchant,
-         * GuildRegister,
-         * Merchant,
-         * MoneyChanger,
-         * MysteryBoxGround,
-         * NameChanger,
-         * ReskinVendor,
-         * OneWayContainer,
-         * Player,
-         * Portal,
-         * Projectile,
-         * Sign,
-         * SpiderWeb,
-         * Stalagmite,
-         * Wall,
-         * Pet,
-         * PetUpgrader,
-         * YardUpgrader
-         */
-
         public static Entity Resolve(RealmManager manager, string name)
         {
             ushort id;

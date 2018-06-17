@@ -24,7 +24,6 @@
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/terrain/bin/Debug/db.dll.config
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/terrain/bin/Debug/Newtonsoft.Json.xml
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/terrain/bin/Debug/log4net.xml
-/Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/terrain/obj/Debug/terrain.csprojResolveAssemblyReference.cache
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/terrain/obj/Debug/terrain.csproj.CoreCompileInputs.cache
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/terrain/obj/Debug/terrain.exe
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/terrain/obj/Debug/terrain.pdb

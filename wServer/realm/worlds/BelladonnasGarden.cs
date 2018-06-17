@@ -11,7 +11,7 @@ namespace wServer.realm.worlds
         public BelladonnasGarden()
         {
             Name = "Belladonna's Garden";
-            ClientWorldName = "dungeons.BelladonnaAPOSs_Garden";
+            ClientWorldName = "Belladonna's Garden";
             Background = 0;
             AllowTeleport = false;
             Difficulty = 5;

@@ -6,7 +6,7 @@
         {
             Id = MARKET;
             Name = "Cloth Bazaar";
-            ClientWorldName = "nexus.Cloth_Bazaar";
+            ClientWorldName = "Cloth Bazzar";
             Background = 2;
             AllowTeleport = false;
             Difficulty = 0;

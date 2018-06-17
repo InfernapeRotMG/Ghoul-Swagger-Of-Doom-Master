@@ -12,7 +12,7 @@ namespace wServer.realm.worlds
         public DavyJonesLocker()
         {
             Name = "Davy Jones's Locker";
-            ClientWorldName = "dungeons.Davy_JonesAPOSs_Locker";
+            ClientWorldName = "Davy Jone's Locker";
             Dungeon = true;
             Difficulty = 5;
             Background = 0;

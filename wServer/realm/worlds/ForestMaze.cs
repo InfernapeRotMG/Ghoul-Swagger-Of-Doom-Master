@@ -11,7 +11,7 @@ namespace wServer.realm.worlds
         public ForestMaze()
         {
             Name = "Forest Maze";
-            ClientWorldName = "dungeons.Forest_Maze";
+            ClientWorldName = "Forest Maze";
             Background = 0;
             Difficulty = 1;
             AllowTeleport = true;

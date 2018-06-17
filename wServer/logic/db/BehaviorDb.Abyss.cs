@@ -12,12 +12,13 @@ namespace wServer.logic
                     new OnDeathBehavior(new ApplySetpiece("AbyssDeath")),
                     new State("default",
                         new PlayerWithinTransition(8, "basic")
-                        ),
+                        ),                        
                     new State("basic",
+                        new Taunt(1.0, "Welcome to the Abyss of the Demons, where fate meets luck to determine the outcome..."),
                         new Prioritize(
                             new Follow(0.3),
                             new Wander(0.2)
-                            ),
+                            ),                            
                         new Reproduce("Malphas Missile", densityMax: 1, spawnRadius: 1, coolDown: 1000),
                         new Shoot(10, predictive: 1, coolDown: 800),
                         new TimedTransition(10000, "shrink")
@@ -61,13 +62,6 @@ namespace wServer.logic
                         new TimedTransition(1000, "basic")
                         )
                     ),
-                //LootTemplates.DefaultEggLoot(EggRarity.Legendary),
-                new MostDamagers(3,
-                    new ItemLoot("Potion of Vitality", 1.0)
-                ),
-                new MostDamagers(1,
-                    new ItemLoot("Potion of Defense", 1.0)
-                ),
                 new Threshold(0.025,
                     new TierLoot(9, ItemType.Weapon, 0.1),
                     new TierLoot(4, ItemType.Ability, 0.1),
@@ -76,7 +70,9 @@ namespace wServer.logic
                     new TierLoot(10, ItemType.Armor, 0.05),
                     new TierLoot(10, ItemType.Weapon, 0.05),
                     new TierLoot(4, ItemType.Ring, 0.025),
-                    new ItemLoot("Demon Blade", 0.01)
+                    new ItemLoot("Demon Blade", 0.01),
+                    new ItemLoot("Potion of Defense", 0.5),
+                    new ItemLoot("Potion of Vitality", 1.0)
                 )
             )
             .Init("Malphas Missile",

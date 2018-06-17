@@ -18,7 +18,6 @@
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/db/bin/Debug/Newtonsoft.Json.dll
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/db/bin/Debug/log4net.xml
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/db/bin/Debug/Newtonsoft.Json.xml
-/Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/db/obj/Debug/db.csprojResolveAssemblyReference.cache
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/db/obj/Debug/db.csproj.CoreCompileInputs.cache
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/db/obj/Debug/db.dll
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/db/obj/Debug/db.pdb

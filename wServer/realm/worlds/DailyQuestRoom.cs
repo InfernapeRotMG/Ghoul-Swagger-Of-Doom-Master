@@ -13,7 +13,7 @@ namespace wServer.realm.worlds
         public DailyQuestRoom()
         {
             Name = "Daily Quest Room";
-            ClientWorldName = "{nexus.Daily_Quest_Room}";
+            ClientWorldName = "Daily Quest Room";
             Background = 0;
             AllowTeleport = false;
             Difficulty = -1;

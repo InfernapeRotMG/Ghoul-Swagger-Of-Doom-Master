@@ -57,10 +57,6 @@ namespace wServer.realm
             return entity.Owner.GetEntity(entityId);
         }
 
-
-        /// <summary>
-        /// Only for enemys
-        /// </summary>
         public static IEnumerable<Entity> GetNearestEntities(this Entity entity, double dist)
         {
             if (entity.Owner == null) yield break;
@@ -73,7 +69,6 @@ namespace wServer.realm
         }
 
         public static IEnumerable<Entity> GetNearestEntities(this Entity entity, double dist, ushort? objType, bool pets = false)
-            //Null for player
         {
             if (entity.Owner == null) yield break;
             if (objType == null)

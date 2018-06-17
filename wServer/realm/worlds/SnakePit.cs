@@ -12,7 +12,7 @@ namespace wServer.realm.worlds
         public SnakePit()
         {
             Name = "Snake Pit";
-            ClientWorldName = "dungeons.Snake_Pit";
+            ClientWorldName = "Snake Pit";
             Dungeon = true;
             Background = 0;
             AllowTeleport = true;

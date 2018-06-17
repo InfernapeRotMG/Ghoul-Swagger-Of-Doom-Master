@@ -5,7 +5,7 @@
         public PirateCave()
         {
             Name = "Pirate Cave";
-            ClientWorldName = "dungeons.Pirate_Cave";
+            ClientWorldName = "Pirate Cave";
             Background = 0;
             Difficulty = 1;
             AllowTeleport = true;

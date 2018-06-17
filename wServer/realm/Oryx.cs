@@ -28,9 +28,9 @@ namespace wServer.realm
             Tuple.Create("Skull Shrine", (ISetPiece) new SkullShrine()),
             Tuple.Create("Pentaract", (ISetPiece) new Pentaract()),
             Tuple.Create("Grand Sphinx", (ISetPiece) new Sphinx()),
-            //"Lord of the Lost Lands",
-            //"Hermit God",
-            //"Ghost Ship",
+            //Tuple.Create("Lord of the Lost Lands", (ISetPiece) new LordOfTheLostLands()),
+            Tuple.Create("Hermit God", (ISetPiece) new Hermit()),
+            Tuple.Create("Ghost Ship", (ISetPiece) new GhostShip()),
             Tuple.Create("Cube God", (ISetPiece) new CubeGod()),
         };
 
@@ -221,11 +221,7 @@ namespace wServer.realm
         public bool CheckFinalQuests()
         {
             if (CountEnemies(
-                "Lich", "Actual Lich",
-                "Ent Ancient", "Actual Ent Ancient",
-                "Phoenix Reborn",
-                "Oasis Giant", "Ghost King", "Cyclops God", "Red Demon",
-                "Skull Shrine", "Cube God", "Grand Sphinx", "Hermit God") != 0) return false;
+                "Skull Shrine", "Cube God", "Grand Sphinx", "Hermit God", "Ghost Ship", "Lord of the Lost Lands") != 0) return false;
             RealmClosed = true;
             return true;
         }
@@ -238,7 +234,7 @@ namespace wServer.realm
                 ocWorld = world.Manager.AddWorld(new OryxCastle());
                 ocWorld.Manager = world.Manager;
             }));
-            world.Timers.Add(new WorldTimer(8000, (w, t) =>
+            world.Timers.Add(new WorldTimer(4000, (w, t) =>
             {
                 foreach (var i in world.Players.Values)
                 {
@@ -255,15 +251,15 @@ namespace wServer.realm
             }));
             foreach (var i in world.Players.Values)
             {
-                SendMsg(i, "MY MINIONS HAVE FAILED ME!", "#Oryx the Mad God");
-                SendMsg(i, "BUT NOW YOU SHALL FEEL MY WRATH!", "#Oryx the Mad God");
-                SendMsg(i, "COME MEET YOUR DOOM AT THE WALLS OF MY CASTLE!", "#Oryx the Mad God");
+                SendMsg(i, "How can this be?", "#Oryx the Mad God");
+                SendMsg(i, "My minions have failed to destroy a few mortals?", "#Oryx the Mad God");
+                SendMsg(i, "This is trickery, come face my at my castle, and feel my true power!", "#Oryx the Mad God");
                 i.Client.SendPacket(new ShowEffectPacket
                 {
                     EffectType = EffectType.Earthquake
                 });
             }
-            world.Timers.Add(new WorldTimer(10000, (w, t) => w.Manager.RemoveWorld(w)));
+            world.Timers.Add(new WorldTimer(5000, (w, t) => w.Manager.RemoveWorld(w)));
         }
 
         public int CountEnemies(params string[] enemies)
@@ -323,8 +319,8 @@ namespace wServer.realm
             ClosingStarted = true;
             foreach (var i in world.Players.Values)
             {
-                SendMsg(i, "I HAVE CLOSED THIS REALM!", "#Oryx the Mad God");
-                SendMsg(i, "YOU WILL NOT LIVE TO SEE THE LIGHT OF DAY!", "#Oryx the Mad God");
+                SendMsg(i, "This is foolish, now no more mortals may enter!", "#Oryx the Mad God");
+                SendMsg(i, "Prepare yourselves mortals, this shall be your final day!", "#Oryx the Mad God");
             }
             world.Timers.Add(new WorldTimer(120000, (ww, tt) => { CloseRealm(); }));
             world.Manager.GetWorld(World.NEXUS_ID).Timers.Add(new WorldTimer(130000, (w, t) => Task.Factory.StartNew(() => GameWorld.AutoName(1, true)).ContinueWith(_ => w.Manager.AddWorld(_.Result), TaskScheduler.Default)));
@@ -384,10 +380,10 @@ namespace wServer.realm
 
         public void OnPlayerEntered(Player player)
         {
-            player.SendInfo("Welcome to Realm of the Mad God");
+            player.SendInfo("Welcome to Ghoul Swagger of Doom");
             player.SendEnemy("Oryx the Mad God", "You are food for my minions!");
             player.SendInfo("Use [WASDQE] to move; click to shoot!");
-            player.SendInfo("Type \"/help\" for more help");
+            player.SendInfo("Make sure you check out your options by pressing 'O'");
         }
 
         public void Tick(RealmTime time)
@@ -430,13 +426,13 @@ namespace wServer.realm
             var c = 0;
             for (var i = 0; i < state.Length; i++)
             {
-                if (enemyCounts[i] > enemyMaxCounts[i] * 1.5)  //Kill some
+                if (enemyCounts[i] > enemyMaxCounts[i] * 0.9)  //Kill some
                 {
                     state[i] = 1;
                     diff[i] = enemyCounts[i] - enemyMaxCounts[i];
                     c++;
                 }
-                else if (enemyCounts[i] < enemyMaxCounts[i] * 0.75) //Add some
+                else if (enemyCounts[i] < enemyMaxCounts[i] * 0.9) //Add some
                 {
                     state[i] = 2;
                     diff[i] = enemyMaxCounts[i] - enemyCounts[i];
@@ -633,7 +629,6 @@ namespace wServer.realm
 
         #region "Taunt data"
 
-        //https://forums.wildshadow.com/node/119997
         private static readonly Tuple<string, TauntData>[] criticalEnemies =
         {
             Tuple.Create("Lich", new TauntData

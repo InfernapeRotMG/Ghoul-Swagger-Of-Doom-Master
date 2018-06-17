@@ -1,7 +1,6 @@
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/DungeonGen/bin/Debug/DungeonGen.dll
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/DungeonGen/bin/Debug/DungeonGen.pdb
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/DungeonGen/bin/Debug/RotMG.Common.dll
-/Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/DungeonGen/obj/Debug/DungeonGen.csprojResolveAssemblyReference.cache
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/DungeonGen/obj/Debug/DungeonGen.csproj.CoreCompileInputs.cache
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/DungeonGen/obj/Debug/DungeonGen.dll
 /Users/hitaghantala/Documents/GitHub/Ghoul-Swagger-Of-Doom-Master/DungeonGen/obj/Debug/DungeonGen.pdb

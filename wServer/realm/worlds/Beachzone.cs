@@ -5,7 +5,7 @@
         public Beachzone()
         {
             Name = "Beachzone";
-            ClientWorldName = "{dungeons.Beachzone}";
+            ClientWorldName = "Beachzone";
             Background = 0;
             Difficulty = 0;
             ShowDisplays = true;

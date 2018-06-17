@@ -11,7 +11,7 @@ namespace wServer.realm.worlds
         public SpriteWorld()
         {
             Name = "Sprite World";
-            ClientWorldName = "dungeons.Sprite_World";
+            ClientWorldName = "Sprite World";
             Background = 0;
             Difficulty = 2;
             AllowTeleport = true;

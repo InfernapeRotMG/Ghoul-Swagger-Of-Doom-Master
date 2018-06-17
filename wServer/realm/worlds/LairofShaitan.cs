@@ -11,7 +11,7 @@ namespace wServer.realm.worlds
         public LairofShaitan()
         {
             Name = "Lair of Shaitan";
-            ClientWorldName = "dungeons.Lair_of_Shaitan";
+            ClientWorldName = "Lair of Shaitan";
             Background = 0;
             AllowTeleport = true;
         }

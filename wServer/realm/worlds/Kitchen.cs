@@ -5,7 +5,7 @@
         public Kitchen()
         {
             Name = "Kitchen";
-            ClientWorldName = "server.Kitchen";
+            ClientWorldName = "Kitchen";
             Background = 0;
         }
 

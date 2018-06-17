@@ -11,7 +11,7 @@ namespace wServer.realm.worlds
         public TheShatters()
         {
             Name = "The Shatters";
-            ClientWorldName = "shatters.The_Shatters";
+            ClientWorldName = "The Shatters";
             Background = 0;
             AllowTeleport = false;
         }

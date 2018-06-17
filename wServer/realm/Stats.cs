@@ -39,28 +39,17 @@ namespace wServer.realm
         public readonly static StatsType Dexterity = 28;
         public readonly static StatsType Effects = 29;
         public readonly static StatsType Stars = 30;
-        public readonly static StatsType Name = 31; //Is UTF
+        public readonly static StatsType Name = 31;
         public readonly static StatsType Texture1 = 32;
         public readonly static StatsType Texture2 = 33;
         public readonly static StatsType MerchantMerchandiseType = 34;
         public readonly static StatsType Credits = 35;
         public readonly static StatsType SellablePrice = 36;
         public readonly static StatsType PortalUsable = 37;
-        public readonly static StatsType AccountId = 38; //Is UTF
+        public readonly static StatsType AccountId = 38; 
         public readonly static StatsType CurrentFame = 39;
         public readonly static StatsType SellablePriceCurrency = 40;
         public readonly static StatsType ObjectConnection = 41;
-        /*
-         * Mask :F0F0F0F0
-         * each byte > type
-         * 0:Dot
-         * 1:ushortLine
-         * 2:L
-         * 3:Line
-         * 4:T
-         * 5:Cross
-         * 0x21222112
-        */
         public readonly static StatsType MerchantRemainingCount = 42;
         public readonly static StatsType MerchantRemainingMinute = 43;
         public readonly static StatsType MerchantDiscount = 44;
@@ -73,7 +62,7 @@ namespace wServer.realm
         public readonly static StatsType VitalityBonus = 51;
         public readonly static StatsType WisdomBonus = 52;
         public readonly static StatsType DexterityBonus = 53;
-        public readonly static StatsType OwnerAccountId = 54; //Is UTF
+        public readonly static StatsType OwnerAccountId = 54; 
         public readonly static StatsType NameChangerStar = 55;
         public readonly static StatsType NameChosen = 56;
         public readonly static StatsType Fame = 57;
@@ -81,7 +70,7 @@ namespace wServer.realm
         public readonly static StatsType Glowing = 59;
         public readonly static StatsType SinkOffset = 60;
         public readonly static StatsType AltTextureIndex = 61;
-        public readonly static StatsType Guild = 62; //Is UTF
+        public readonly static StatsType Guild = 62; 
         public readonly static StatsType GuildRank = 63;
         public readonly static StatsType OxygenBar = 64;
         public readonly static StatsType XpBoosterActive = 65;
@@ -101,11 +90,11 @@ namespace wServer.realm
         public readonly static StatsType Has_Backpack = 79;
         public readonly static StatsType Skin = 80;
         public readonly static StatsType PetId = 81;
-        public readonly static StatsType PetSkin = 82; //Is UTF
+        public readonly static StatsType PetSkin = 82; 
         public readonly static StatsType PetType = 83;
         public readonly static StatsType PetRarity = 84;
         public readonly static StatsType PetMaximumLevel = 85;
-        public readonly static StatsType PetNothing = 86; //This does do nothing in the client
+        public readonly static StatsType PetNothing = 86;
         public readonly static StatsType PetPoints0 = 87;
         public readonly static StatsType PetPoints1 = 88;
         public readonly static StatsType PetPoints2 = 89;
@@ -116,9 +105,6 @@ namespace wServer.realm
         public readonly static StatsType PetAbilityType1 = 94;
         public readonly static StatsType PetAbilityType2 = 95;
         public readonly static StatsType Effects2 = 96;
-        //case StatData._-04I:
-        //   param1.condition_[ConditionEffect._-KL]=_loc8_;
-        //   break;
         public readonly static StatsType Tokens = 97;
 
         private byte _type;

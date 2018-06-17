@@ -76,10 +76,10 @@ namespace wServer.realm
                 {
                     BubbleTime = 0,
                     Stars = -1,
-                    Name = "@Announcement",
+                    Name = "@Server Announcement",
                     Text = text.ToSafeText()
                 });
-            log.InfoFormat("<Announcement> {0}", text);
+            log.InfoFormat("<Server Announcement> {0}", text);
         }
 
         public void Oryx(World world, string text)

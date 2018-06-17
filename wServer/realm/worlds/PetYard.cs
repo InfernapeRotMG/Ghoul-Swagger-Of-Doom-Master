@@ -20,7 +20,7 @@ namespace wServer.realm.worlds
         {
             this.player = player;
             Name = "Pet Yard";
-            ClientWorldName = "{nexus.Pet_Yard_" + player.Client.Account.PetYardType + "}";
+            ClientWorldName = "Pet Yard" + player.Client.Account.PetYardType + "}";
             Background = 0;
             Difficulty = -1;
             ShowDisplays = true;

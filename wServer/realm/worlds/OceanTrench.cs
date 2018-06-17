@@ -11,7 +11,7 @@ namespace wServer.realm.worlds
         public OceanTrench()
         {
             Name = "Ocean Trench";
-            ClientWorldName = "server.Ocean_Trench";
+            ClientWorldName = "Ocean Trench";
             Dungeon = true;
             Background = 0;
             AllowTeleport = true;

@@ -123,15 +123,6 @@ namespace wServer.realm
         private Pet pet;
         private readonly AbilityType type;
 
-
-        //a * (1 - Math.pow(r, level)) / (1 - r)
-        //points to get to level
-        //with a = 20 , r = 1.08
-        //
-        //first 100%
-        //second ~ 70%
-        //third ~ 30%
-
         public PetLevel(AbilityType ability, Ability abilityType, int power, int level, Pet pet)
         {
             this.pet = pet;
@@ -150,9 +141,9 @@ namespace wServer.realm
             int remaining = petFoodNOMNOMNOM.FeedPower;
 
             if (type == AbilityType.Second)
-                remaining = (int)(petFoodNOMNOMNOM.FeedPower * 0.702025);
+                remaining = (int)(petFoodNOMNOMNOM.FeedPower * 0.7);
             if (type == AbilityType.Third)
-                remaining = (int)(petFoodNOMNOMNOM.FeedPower * 0.3240117);
+                remaining = (int)(petFoodNOMNOMNOM.FeedPower * 0.3);
 
             if (Level == pet.MaximumLevel || Level == 100) return;
 

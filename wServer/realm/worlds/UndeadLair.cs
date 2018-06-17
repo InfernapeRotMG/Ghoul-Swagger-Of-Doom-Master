@@ -11,7 +11,7 @@ namespace wServer.realm.worlds
         public UndeadLair()
         {
             Name = "Undead Lair";
-            ClientWorldName = "dungeons.Undead_Lair";
+            ClientWorldName = "Undead Lair";
             Dungeon = true;
             Background = 0;
             AllowTeleport = true;

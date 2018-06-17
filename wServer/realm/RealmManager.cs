@@ -45,53 +45,53 @@ namespace wServer.realm
     {
         public static List<string> Realms = new List<string>(44)
         {
-            "NexusPortal.Lich",
-            "NexusPortal.Goblin",
-            "NexusPortal.Ghost",
-            "NexusPortal.Giant",
-            "NexusPortal.Gorgon",
-            "NexusPortal.Blob",
-            "NexusPortal.Leviathan",
-            "NexusPortal.Unicorn",
-            "NexusPortal.Minotaur",
-            "NexusPortal.Cube",
-            "NexusPortal.Pirate",
-            "NexusPortal.Spider",
-            "NexusPortal.Snake",
-            "NexusPortal.Deathmage",
-            "NexusPortal.Gargoyle",
-            "NexusPortal.Scorpion",
-            "NexusPortal.Djinn",
-            "NexusPortal.Phoenix",
-            "NexusPortal.Satyr",
-            "NexusPortal.Drake",
-            "NexusPortal.Orc",
-            "NexusPortal.Flayer",
-            "NexusPortal.Cyclops",
-            "NexusPortal.Sprite",
-            "NexusPortal.Chimera",
-            "NexusPortal.Kraken",
-            "NexusPortal.Hydra",
-            "NexusPortal.Slime",
-            "NexusPortal.Ogre",
-            "NexusPortal.Hobbit",
-            "NexusPortal.Titan",
-            "NexusPortal.Medusa",
-            "NexusPortal.Golem",
-            "NexusPortal.Demon",
-            "NexusPortal.Skeleton",
-            "NexusPortal.Mummy",
-            "NexusPortal.Imp",
-            "NexusPortal.Bat",
-            "NexusPortal.Wyrm",
-            "NexusPortal.Spectre",
-            "NexusPortal.Reaper",
-            "NexusPortal.Beholder",
-            "NexusPortal.Dragon",
-            "NexusPortal.Harpy"
+            "Lich",
+            "Goblin",
+            "Ghost",
+            "Giant",
+            "Gorgon",
+            "Blob",
+            "Leviathan",
+            "Unicorn",
+            "Minotaur",
+            "Cube",
+            "Pirate",
+            "Spider",
+            "Snake",
+            "Deathmage",
+            "Gargoyle",
+            "Scorpion",
+            "Djinn",
+            "Phoenix",
+            "Satyr",
+            "Drake",
+            "Orc",
+            "Flayer",
+            "Cyclops",
+            "Sprite",
+            "Chimera",
+            "Kraken",
+            "Hydra",
+            "Slime",
+            "Ogre",
+            "Hobbit",
+            "Titan",
+            "Medusa",
+            "Golem",
+            "Demon",
+            "Skeleton",
+            "Mummy",
+            "Imp",
+            "Bat",
+            "Wyrm",
+            "Spectre",
+            "Reaper",
+            "Beholder",
+            "Dragon",
+            "Harpy"
         };
         public static List<string> CurrentRealmNames = new List<string>();
-        public const int MAX_REALM_PLAYERS = 85;
+        public const int MAX_REALM_PLAYERS = 30;
 
         private static readonly ILog log = LogManager.GetLogger(typeof(RealmManager));
 
@@ -202,8 +202,8 @@ namespace wServer.realm
                     if ((dummy = i.Value.GetUniqueNamedPlayerRough(name)) != null)
                         return dummy;
             return null;
-        }
-
+        }        
+        
         public World GetWorld(int id)
         {
             World ret;

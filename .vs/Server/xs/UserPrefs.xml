@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{2ADA25D1-158E-4E88-B91B-F79981372136}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="server/server.cfg">
+  <MonoDevelop.Ide.Workbench ActiveDocument="wServer/realm/commands/AdminCommands.cs">
     <Files>
-      <File FileName="wServer/networking/NetworkHandler.cs" Line="130" Column="45" />
-      <File FileName="wServer/logic/db/BehaviorDb.Oryx.cs" Line="91" Column="14" />
-      <File FileName="server/server.cfg" Line="24" Column="22" />
-      <File FileName="wServer/wServer.cfg" Line="21" Column="11" />
+      <File FileName="wServer/realm/entities/player/Player.cs" Line="346" Column="1" />
+      <File FileName="server/server.cfg" Line="21" Column="23" />
+      <File FileName="wServer/realm/RealmManager.cs" Line="254" Column="44" />
+      <File FileName="wServer/realm/commands/AdminCommands.cs" Line="314" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

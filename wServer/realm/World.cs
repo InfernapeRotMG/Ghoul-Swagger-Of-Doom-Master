@@ -213,29 +213,6 @@ namespace wServer.realm
             }
         }
 
-        //public void FromJsonMap(string file)
-        //{
-        //    if (File.Exists(file))
-        //    {
-        //        var wmap = Json2Wmap.Convert(File.ReadAllText(file));
-
-        //        FromWorldMap(new MemoryStream(wmap));
-        //    }
-        //    else
-        //    {
-        //        throw new FileNotFoundException("Json file not found!", file);
-        //    }
-        //}
-
-        //public void FromJsonStream(Stream dat)
-        //{
-        //    byte[] data = { };
-        //    dat.Read(data, 0, (int)dat.Length);
-        //    var json = Encoding.ASCII.GetString(data);
-        //    var wmap = Json2Wmap.Convert(json);
-        //    FromWorldMap(new MemoryStream(wmap));
-        //} //not working
-
         public virtual int EnterWorld(Entity entity)
         {
             var player = entity as Player;

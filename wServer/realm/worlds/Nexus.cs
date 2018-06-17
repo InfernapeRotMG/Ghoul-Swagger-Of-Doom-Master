@@ -19,15 +19,18 @@ namespace wServer.realm.worlds
         {
             Id = NEXUS_ID;
             Name = "Nexus";
-            ClientWorldName = "server.nexus";
+            ClientWorldName = "Nexus";
             Background = 2;
             AllowTeleport = false;
             Difficulty = -1;
         }
+        
+        public static RealmManager man;
 
         protected override void Init()
         {
             LoadMap(SUMMER_RESOURCE, MapType.Json);
+            man = this.Manager;
         }
 
         public override void Tick(RealmTime time)
@@ -37,7 +40,22 @@ namespace wServer.realm.worlds
             CheckDupers();
             UpdatePortals();
         }
-
+        
+    public static Portal getRealm()
+        {
+            foreach (var i in man.Monitor.portals)
+            {
+                foreach (var j in RealmManager.CurrentRealmNames)
+                {
+                    if (i.Value.Name.StartsWith(j))
+                    {
+                        return i.Value;
+                    }
+                }
+            }
+            return null;
+        }
+        
         private void CheckDupers()
         {
             foreach (KeyValuePair<int, World> w in Manager.Worlds)
@@ -57,7 +75,7 @@ namespace wServer.realm.worlds
                     }
                 }
             }
-        }
+        }        
 
         private void UpdatePortals()
         {

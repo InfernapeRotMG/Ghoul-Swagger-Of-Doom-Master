@@ -5,7 +5,7 @@
         public TomboftheAncients()
         {
             Name = "Tomb of the Ancients";
-            ClientWorldName = "dungeons.Tomb_of_the_Ancients";
+            ClientWorldName = "Tomb of the Ancients";
             Dungeon = true;
             Background = 0;
             AllowTeleport = true;

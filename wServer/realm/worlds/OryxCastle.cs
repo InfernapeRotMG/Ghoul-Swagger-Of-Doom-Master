@@ -11,7 +11,7 @@ namespace wServer.realm.worlds
         public OryxCastle()
         {
             Name = "Oryx's Castle";
-            ClientWorldName = "server.Oryx's_Castle";
+            ClientWorldName = "Oryx's Castle";
             Background = 0;
             AllowTeleport = false;
         }

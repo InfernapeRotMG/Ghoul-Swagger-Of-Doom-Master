@@ -16,73 +16,12 @@ using wServer.realm.worlds;
 
 namespace wServer.realm.commands
 {
-    internal class TestCommand : Command
-    {
-        public TestCommand()
-            : base("t", 1)
-        {
-        }
-
-        protected override bool Process(Player player, RealmTime time, string[] args)
-        {
-            Entity en = Entity.Resolve(player.Manager, "Zombie Wizard");
-            en.Move(player.X, player.Y);
-            player.Owner.EnterWorld(en);
-            player.UpdateCount++;
-            //player.Client.SendPacket(new DeathPacket
-            //{
-            //    AccountId = player.AccountId,
-            //    CharId = player.Client.Character.CharacterId,
-            //    Killer = "mountains.beholder",
-            //    obf0 = 10000,
-            //    obf1 = 10000
-            //});
-            return true;
-        }
-    }
-
-    internal class AddGiftCodeCommand : Command
-    {
-        public AddGiftCodeCommand()
-            : base("gcode", 1)
-        {
-        }
-
-        protected override bool Process(Player player, RealmTime time, string[] args)
-        {
-            try
-            {
-                if (!String.IsNullOrWhiteSpace(args[0]))
-                    player.Manager.FindPlayer(args[0])?.Client.GiftCodeReceived("LevelUp");
-                else
-                    player.Client.GiftCodeReceived("LevelUp");
-            }
-            catch (Exception) { }
-            return true;
-        }
-    }
-
-    internal class posCmd : Command
-    {
-        public posCmd()
-            : base("p", 1)
-        {
-        }
-
-        protected override bool Process(Player player, RealmTime time, string[] args)
-        {
-            player.SendInfo("X: " + (int)player.X + " - Y: " + (int)player.Y);
-            return true;
-        }
-    }
-
     internal class BanCommand : Command
     {
         public BanCommand() : 
             base("ban", permLevel: 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             var p = player.Manager.FindPlayer(args[1]);
@@ -101,30 +40,39 @@ namespace wServer.realm.commands
             return true;
         }
     }
-
-
-    internal class AddWorldCommand : Command
+    
+    internal class Realm : Command
     {
-        public AddWorldCommand()
-            : base("addworld", 1)
+        public Realm()
+            : base("realm", 0)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
-            Task.Factory.StartNew(() => GameWorld.AutoName(1, true)).ContinueWith(_ => player.Manager.AddWorld(_.Result), TaskScheduler.Default);
+
+            Portal p = Nexus.getRealm();
+            Packet pkt = new ReconnectPacket
+            {
+                GameId = p.WorldInstance.Id,
+                Host = "",
+                IsFromArena = false,
+                Key = p.Owner.PortalKey,
+                KeyTime = -1,
+                Name = p.Name,
+                Port = -1
+            };
+            player.Client.SendPacket(pkt);
             return true;
+
         }
     }
-
-
+    
     internal class SpawnCommand : Command
     {
         public SpawnCommand()
             : base("spawn", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             int num;
@@ -143,14 +91,14 @@ namespace wServer.realm.commands
                     return false;
                 }
                 int c = int.Parse(args[0]);
-                if (!(player.Client.Account.Rank > 2) && c > 200)
+                if (!(player.Client.Account.Rank > 3) && c > 100)
                 {
-                    player.SendError("Maximum spawn count is set to 200!");
+                    player.SendError("Maximum spawn count is set to 100!");
                     return false;
                 }
-                if (player.Client.Account.Rank > 2 && c > 200)
+                if (player.Client.Account.Rank == 3 && c > 100)
                 {
-                    player.SendInfo("Bypass made!");
+                    player.SendInfo("Bypass granted, spawning now!");
                 }
                 for (int i = 0; i < num; i++)
                 {
@@ -164,7 +112,6 @@ namespace wServer.realm.commands
             {
                 string name = string.Join(" ", args);
                 ushort objType;
-                //creates a new case insensitive dictionary based on the XmlDatas
                 Dictionary<string, ushort> icdatas = new Dictionary<string, ushort>(
                     player.Manager.GameData.IdToObjectType,
                     StringComparer.OrdinalIgnoreCase);
@@ -188,7 +135,6 @@ namespace wServer.realm.commands
             : base("addeff", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             if (args.Length == 0)
@@ -222,7 +168,6 @@ namespace wServer.realm.commands
             : base("remeff", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             if (args.Length == 0)
@@ -254,7 +199,6 @@ namespace wServer.realm.commands
             : base("give", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             if (args.Length == 0)
@@ -264,7 +208,6 @@ namespace wServer.realm.commands
             }
             string name = string.Join(" ", args.ToArray()).Trim();
             ushort objType;
-            //creates a new case insensitive dictionary based on the XmlDatas
             Dictionary<string, ushort> icdatas = new Dictionary<string, ushort>(player.Manager.GameData.IdToObjectType,
                 StringComparer.OrdinalIgnoreCase);
             if (!icdatas.TryGetValue(name, out objType))
@@ -293,54 +236,11 @@ namespace wServer.realm.commands
         }
     }
 
-    internal class TpCommand : Command
-    {
-        public TpCommand()
-            : base("tp", 1)
-        {
-        }
-
-        protected override bool Process(Player player, RealmTime time, string[] args)
-        {
-            if (args.Length == 0 || args.Length == 1)
-            {
-                player.SendHelp("Usage: /tp <X coordinate> <Y coordinate>");
-            }
-            else
-            {
-                int x, y;
-                try
-                {
-                    x = int.Parse(args[0]);
-                    y = int.Parse(args[1]);
-                }
-                catch
-                {
-                    player.SendError("Invalid coordinates!");
-                    return false;
-                }
-                player.Move(x + 0.5f, y + 0.5f);
-                if (player.Pet != null)
-                    player.Pet.Move(x + 0.5f, y + 0.5f);
-                player.UpdateCount++;
-                player.Owner.BroadcastPacket(new GotoPacket
-                {
-                    ObjectId = player.Id,
-                    Position = new Position
-                    {
-                        X = player.X,
-                        Y = player.Y
-                    }
-                }, null);
-            }
-            return true;
-        }
-    }
-
     class KillAll : Command
     {
-        public KillAll() : base("killAll", permLevel: 1) { }
-        
+        public KillAll() : base("killAll", permLevel: 1) 
+        { 
+        }   
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             var iterations = 0;
@@ -361,7 +261,7 @@ namespace wServer.realm.commands
                     break;
             }
 
-            player.SendInfo($"{killed} enemy killed!");
+            player.SendInfo($"{killed} enemies killed!");
             return true;
         }
     }
@@ -372,7 +272,6 @@ namespace wServer.realm.commands
             : base("kick", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             if (args.Length == 0)
@@ -386,14 +285,14 @@ namespace wServer.realm.commands
                 {
                     if (i.Value.Name.ToLower() == args[0].ToLower().Trim())
                     {
-                        player.SendInfo("Player Disconnected");
+                        player.SendInfo("Player has been kicked");
                         i.Value.Client.Disconnect();
                     }
                 }
             }
             catch
             {
-                player.SendError("Cannot kick!");
+                player.SendError("Could not kick that player!");
                 return false;
             }
             return true;
@@ -402,11 +301,9 @@ namespace wServer.realm.commands
 
     internal class Mute : Command
     {
-        public Mute()
-            : base("mute", 1)
+        public Mute() : base("mute", permLevel: 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             if (args.Length == 0)
@@ -441,7 +338,6 @@ namespace wServer.realm.commands
             : base("max", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             try
@@ -461,7 +357,7 @@ namespace wServer.realm.commands
             }
             catch
             {
-                player.SendError("Error while maxing stats");
+                player.SendError("Error whilst maxing stats");
                 return false;
             }
             return true;
@@ -474,7 +370,6 @@ namespace wServer.realm.commands
             : base("unmute", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             if (args.Length == 0)
@@ -503,36 +398,14 @@ namespace wServer.realm.commands
         }
     }
 
-    internal class OryxSay : Command
+    internal class ServerWhoCommand : Command
     {
-        public OryxSay()
-            : base("osay", 1)
+        public ServerWhoCommand() : base("online", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
-            if (args.Length == 0)
-            {
-                player.SendHelp("Usage: /oryxsay <saytext>");
-                return false;
-            }
-            string saytext = string.Join(" ", args);
-            player.SendEnemy("Oryx the Mad God", saytext);
-            return true;
-        }
-    }
-
-    internal class SWhoCommand : Command //get all players from all worlds (this may become too large!)
-    {
-        public SWhoCommand()
-            : base("swho", 1)
-        {
-        }
-
-        protected override bool Process(Player player, RealmTime time, string[] args)
-        {
-            StringBuilder sb = new StringBuilder("All conplayers: ");
+            StringBuilder sb = new StringBuilder("All players: ");
 
             foreach (KeyValuePair<int, World> w in player.Manager.Worlds)
             {
@@ -550,7 +423,7 @@ namespace wServer.realm.commands
                     }
                 }
             }
-            string fixedString = sb.ToString().TrimEnd(',', ' '); //clean up trailing ", "s
+            string fixedString = sb.ToString().TrimEnd(',', ' ');
 
             player.SendInfo(fixedString);
             return true;
@@ -563,7 +436,6 @@ namespace wServer.realm.commands
             : base("announce", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             if (args.Length == 0)
@@ -578,8 +450,8 @@ namespace wServer.realm.commands
                 i.SendPacket(new TextPacket
                 {
                     BubbleTime = 0,
-                    Stars = -1,
-                    Name = "@ANNOUNCEMENT",
+                    Stars = 70,
+                    Name = "@Server Announcement",
                     Text = " " + saytext
                 });
             }
@@ -593,12 +465,11 @@ namespace wServer.realm.commands
             : base("summon", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
-            if (player.Owner is Vault || player.Owner is PetYard)
+            if (player.Owner is Vault || player.Owner is PetYard || player.Owner is Nexus)
             {
-                player.SendInfo("You cant summon in this world.");
+                player.SendInfo("You cannot summon in this world.");
                 return false;
             }
             foreach (KeyValuePair<string, Client> i in player.Manager.Clients)
@@ -631,9 +502,7 @@ namespace wServer.realm.commands
                         };
                         player.SendInfo("Player will connect to you now!");
                     }
-
                     i.Value.SendPacket(pkt);
-
                     return true;
                 }
             }
@@ -641,473 +510,6 @@ namespace wServer.realm.commands
             return false;
         }
     }
-
-    internal class KillPlayerCommand : Command
-    {
-        public KillPlayerCommand()
-            : base("kill", 1)
-        {
-        }
-
-        protected override bool Process(Player player, RealmTime time, string[] args)
-        {
-            foreach (Client i in player.Manager.Clients.Values)
-            {
-                if (i.Account.Name.EqualsIgnoreCase(args[0]))
-                {
-                    i.Player.HP = 0;
-                    i.Player.Death("Admin");
-                    player.SendInfo("Player killed!");
-                    return true;
-                }
-            }
-            player.SendError(string.Format("Player '{0}' could not be found!", args));
-            return false;
-        }
-    }
-
-    internal class RestartCommand : Command
-    {
-        public RestartCommand()
-            : base("restart", 1)
-        {
-        }
-
-        protected override bool Process(Player player, RealmTime time, string[] args)
-        {
-            try
-            {
-                foreach (KeyValuePair<int, World> w in player.Manager.Worlds)
-                {
-                    World world = w.Value;
-                    if (w.Key != 0)
-                    {
-                        world.BroadcastPacket(new TextPacket
-                        {
-                            Name = "@ANNOUNCEMENT",
-                            Stars = -1,
-                            BubbleTime = 0,
-                            Text =
-                                "Server restarting soon. Please be ready to disconnect. Estimated server down time: 30 Seconds - 1 Minute"
-                        }, null);
-                    }
-                }
-            }
-            catch
-            {
-                player.SendError("Cannot say that in announcement!");
-                return false;
-            }
-            return true;
-        }
-    }
-
-    //class VitalityCommand : ICommand
-    //{
-    //    public string Command { get { return "vit"; } }
-    //    public int RequiredRank { get { return 3; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        try
-    //        {
-    //            if (args.Length == 0)
-    //            {
-    //                player.SendHelp("Use /vit <ammount>");
-    //            }
-    //            else if (args.Length == 1)
-    //            {
-    //                player.Client.Player.Stats[5] = int.Parse(args[0]);
-    //                player.UpdateCount++;
-    //                player.SendInfo("Success!");
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendError("Error!");
-    //        }
-    //    }
-    //}
-
-    //class DefenseCommand : ICommand
-    //{
-    //    public string Command { get { return "def"; } }
-    //    public int RequiredRank { get { return 3; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        try
-    //        {
-    //            if (args.Length == 0)
-    //            {
-    //                player.SendHelp("Use /def <ammount>");
-    //            }
-    //            else if (args.Length == 1)
-    //            {
-    //                player.Client.Player.Stats[3] = int.Parse(args[0]);
-    //                player.UpdateCount++;
-    //                player.SendInfo("Success!");
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendError("Error!");
-    //        }
-    //    }
-    //}
-
-    //class AttackCommand : ICommand
-    //{
-    //    public string Command { get { return "att"; } }
-    //    public int RequiredRank { get { return 3; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        try
-    //        {
-    //            if (args.Length == 0)
-    //            {
-    //                player.SendHelp("Use /att <ammount>");
-    //            }
-    //            else if (args.Length == 1)
-    //            {
-    //                player.Client.Player.Stats[2] = int.Parse(args[0]);
-    //                player.UpdateCount++;
-    //                player.SendInfo("Success!");
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendError("Error!");
-    //        }
-    //    }
-    //}
-
-    //class DexterityCommand : ICommand
-    //{
-    //    public string Command { get { return "dex"; } }
-    //    public int RequiredRank { get { return 3; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        try
-    //        {
-    //            if (args.Length == 0)
-    //            {
-    //                player.SendHelp("Use /dex <ammount>");
-    //            }
-    //            else if (args.Length == 1)
-    //            {
-    //                player.Client.Player.Stats[7] = int.Parse(args[0]);
-    //                player.UpdateCount++;
-    //                player.SendInfo("Success!");
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendError("Error!");
-    //        }
-    //    }
-    //}
-
-    //class LifeCommand : ICommand
-    //{
-    //    public string Command { get { return "hp"; } }
-    //    public int RequiredRank { get { return 3; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        try
-    //        {
-    //            if (args.Length == 0)
-    //            {
-    //                player.SendHelp("Use /hp <ammount>");
-    //            }
-    //            else if (args.Length == 1)
-    //            {
-    //                player.Client.Player.Stats[0] = int.Parse(args[0]);
-    //                player.UpdateCount++;
-    //                player.SendInfo("Success!");
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendError("Error!");
-    //        }
-    //    }
-    //}
-
-    //class ManaCommand : ICommand
-    //{
-    //    public string Command { get { return "mp"; } }
-    //    public int RequiredRank { get { return 3; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        try
-    //        {
-    //            if (args.Length == 0)
-    //            {
-    //                player.SendHelp("Use /mp <ammount>");
-    //            }
-    //            else if (args.Length == 1)
-    //            {
-    //                player.Client.Player.Stats[1] = int.Parse(args[0]);
-    //                player.UpdateCount++;
-    //                player.SendInfo("Success!");
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendError("Error!");
-    //        }
-    //    }
-    //}
-
-    //class SpeedCommand : ICommand
-    //{
-    //    public string Command { get { return "spd"; } }
-    //    public int RequiredRank { get { return 3; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        try
-    //        {
-    //            if (args.Length == 0)
-    //            {
-    //                player.SendHelp("Use /spd <ammount>");
-    //            }
-    //            else if (args.Length == 1)
-    //            {
-    //                player.Client.Player.Stats[4] = int.Parse(args[0]);
-    //                player.UpdateCount++;
-    //                player.SendInfo("Success!");
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendError("Error!");
-    //        }
-    //    }
-    //}
-
-    //class WisdomCommand : ICommand
-    //{
-    //    public string Command { get { return "wis"; } }
-    //    public int RequiredRank { get { return 3; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        try
-    //        {
-    //            if (args.Length == 0)
-    //            {
-    //                player.SendHelp("Use /spd <ammount>");
-    //            }
-    //            else if (args.Length == 1)
-    //            {
-    //                player.Client.Player.Stats[6] = int.Parse(args[0]);
-    //                player.UpdateCount++;
-    //                player.SendInfo("Success!");
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendError("Error!");
-    //        }
-    //    }
-    //}
-
-    //class Ban : ICommand
-    //{
-    //    public string Command { get { return "ban"; } }
-    //    public int RequiredRank { get { return 4; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        if (args.Length == 0)
-    //        {
-    //            player.SendHelp("Usage: /ban <username>");
-    //        }
-    //        try
-    //        {
-    //            using (Database dbx = new Database())
-    //            {
-    //                var cmd = dbx.CreateQuery();
-    //                cmd.CommandText = "UPDATE accounts SET banned=1, rank=0 WHERE name=@name";
-    //                cmd.Parameters.AddWithValue("@name", args[0]);
-    //                if (cmd.ExecuteNonQuery() == 0)
-    //                {
-    //                    player.SendInfo("Could not ban");
-    //                }
-    //                else
-    //                {
-    //                    foreach (var i in player.Owner.Players)
-    //                    {
-    //                        if (i.Value.Name.ToLower() == args[0].ToLower().Trim())
-    //                        {
-    //                            i.Value.Client.Disconnect();
-    //                            player.SendInfo("Account successfully Banned");
-    //                            log.InfoFormat(args[0] + " was Banned.");
-    //                        }
-    //                    }
-    //                }
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendInfo("Could not ban");
-    //        }
-    //    }
-    //}
-
-    //class UnBan : ICommand
-    //{
-    //    public string Command { get { return "unban"; } }
-    //    public int RequiredRank { get { return 4; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        if (args.Length == 0)
-    //        {
-    //            player.SendHelp("Usage: /unban <username>");
-    //        }
-    //        try
-    //        {
-    //            using (Database dbx = new Database())
-    //            {
-    //                var cmd = dbx.CreateQuery();
-    //                cmd.CommandText = "UPDATE accounts SET banned=0, rank=1 WHERE name=@name";
-    //                cmd.Parameters.AddWithValue("@name", args[0]);
-    //                if (cmd.ExecuteNonQuery() == 0)
-    //                {
-    //                    player.SendInfo("Could not unban");
-    //                }
-    //                else
-    //                {
-    //                    player.SendInfo("Account successfully Unbanned");
-    //                    log.InfoFormat(args[1] + " was Unbanned.");
-
-    //                }
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendInfo("Could not unban, please unban in database");
-    //        }
-    //    }
-    //}
-
-    //class Rank : ICommand
-    //{
-    //    public string Command { get { return "rank"; } }
-    //    public int RequiredRank { get { return 4; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        if (args.Length < 2)
-    //        {
-    //            player.SendHelp("Usage: /rank <username> <number>\n0: Player\n1: Donator\n2: Game Master\n3: Developer\n4: Head Developer\n5: Admin");
-    //        }
-    //        else
-    //        {
-    //            try
-    //            {
-    //                using (Database dbx = new Database())
-    //                {
-    //                    var cmd = dbx.CreateQuery();
-    //                    cmd.CommandText = "UPDATE accounts SET rank=@rank WHERE name=@name";
-    //                    cmd.Parameters.AddWithValue("@rank", args[1]);
-    //                    cmd.Parameters.AddWithValue("@name", args[0]);
-    //                    if (cmd.ExecuteNonQuery() == 0)
-    //                    {
-    //                        player.SendInfo("Could not change rank");
-    //                    }
-    //                    else
-    //                        player.SendInfo("Account rank successfully changed");
-    //                }
-    //            }
-    //            catch
-    //            {
-    //                player.SendInfo("Could not change rank, please change rank in database");
-    //            }
-    //        }
-    //    }
-    //}
-    //class GuildRank : ICommand
-    //{
-    //    public string Command { get { return "grank"; } }
-    //    public int RequiredRank { get { return 4; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        if (args.Length < 2)
-    //        {
-    //            player.SendHelp("Usage: /grank <username> <number>");
-    //        }
-    //        else
-    //        {
-    //            try
-    //            {
-    //                using (Database dbx = new Database())
-    //                {
-    //                    var cmd = dbx.CreateQuery();
-    //                    cmd.CommandText = "UPDATE accounts SET guildRank=@guildRank WHERE name=@name";
-    //                    cmd.Parameters.AddWithValue("@guildRank", args[1]);
-    //                    cmd.Parameters.AddWithValue("@name", args[0]);
-    //                    if (cmd.ExecuteNonQuery() == 0)
-    //                    {
-    //                        player.SendInfo("Could not change guild rank. Use 10, 20, 30, 40, or 50 (invisible)");
-    //                    }
-    //                    else
-    //                        player.SendInfo("Guild rank successfully changed");
-    //                    log.InfoFormat(args[1] + "'s guild rank has been changed");
-    //                }
-    //            }
-    //            catch
-    //            {
-    //                player.SendInfo("Could not change rank, please change rank in database");
-    //            }
-    //        }
-    //    }
-    //}
-    //class ChangeGuild : ICommand
-    //{
-    //    public string Command { get { return "setguild"; } }
-    //    public int RequiredRank { get { return 4; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        if (args.Length < 2)
-    //        {
-    //            player.SendHelp("Usage: /setguild <username> <guild id>");
-    //        }
-    //        else
-    //        {
-    //            try
-    //            {
-    //                using (Database dbx = new Database())
-    //                {
-    //                    var cmd = dbx.CreateQuery();
-    //                    cmd.CommandText = "UPDATE accounts SET guild=@guild WHERE name=@name";
-    //                    cmd.Parameters.AddWithValue("@guild", args[1]);
-    //                    cmd.Parameters.AddWithValue("@name", args[0]);
-    //                    if (cmd.ExecuteNonQuery() == 0)
-    //                    {
-    //                        player.SendInfo("Could not change guild.");
-    //                    }
-    //                    else
-    //                        player.SendInfo("Guild successfully changed");
-    //                    log.InfoFormat(args[1] + "'s guild has been changed");
-    //                }
-    //            }
-    //            catch
-    //            {
-    //                player.SendInfo("Could not change guild, please change in database.                                Use /setguild <username> <guild id>");
-    //            }
-    //        }
-    //    }
-    //}
 
     internal class TqCommand : Command
     {
@@ -1115,7 +517,6 @@ namespace wServer.realm.commands
             : base("tq", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             if (player.Quest == null)
@@ -1141,72 +542,26 @@ namespace wServer.realm.commands
         }
     }
 
-    //class GodMode : ICommand
-    //{
-    //    public string Command { get { return "god"; } }
-    //    public int RequiredRank { get { return 3; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        if (player.HasConditionEffect(ConditionEffects.Invincible))
-    //        {
-    //            player.ApplyConditionEffect(new ConditionEffect()
-    //            {
-    //                Effect = ConditionEffectIndex.Invincible,
-    //                DurationMS = 0
-    //            });
-    //            player.SendInfo("Godmode Off");
-    //        }
-    //        else
-    //        {
-
-    //            player.ApplyConditionEffect(new ConditionEffect()
-    //            {
-    //                Effect = ConditionEffectIndex.Invincible,
-    //                DurationMS = -1
-    //            });
-    //            player.SendInfo("Godmode On");
-    //        }
-    //    }
-    //}
-    //class StarCommand : ICommand
-    //{
-    //    public string Command { get { return "stars"; } }
-    //    public int RequiredRank { get { return 2; } }
-
-    //    protected override bool Process(Player player, RealmTime time, string[] args)
-    //    {
-    //        try
-    //        {
-    //            if (args.Length == 0)
-    //            {
-    //                player.SendHelp("Use /stars <ammount>");
-    //            }
-    //            else if (args.Length == 1)
-    //            {
-    //                player.Client.Player.Stars = int.Parse(args[0]);
-    //                player.UpdateCount++;
-    //                player.SendInfo("Success!");
-    //            }
-    //        }
-    //        catch
-    //        {
-    //            player.SendError("Error!");
-    //        }
-    //    }
-    //}
-
     internal class LevelCommand : Command
     {
         public LevelCommand()
             : base("level", 1)
         {
         }
-
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             try
             {
+                int c = int.Parse(args[0]);
+                if (!(player.Client.Account.Rank > 3) && c > 20)
+                {
+                    player.SendError("Maximum level is 20!");
+                    return false;
+                }
+                if (player.Client.Account.Rank == 3 && c > 20)
+                {
+                    player.SendInfo("Bypass granted, increasing level!");
+                }
                 if (args.Length == 0)
                 {
                     player.SendHelp("Use /level <ammount>");
@@ -1229,170 +584,11 @@ namespace wServer.realm.commands
         }
     }
 
-    internal class SetCommand : Command
-    {
-        public SetCommand()
-            : base("setStat", 1)
-        {
-        }
-
-        protected override bool Process(Player player, RealmTime time, string[] args)
-        {
-            if (args.Length == 2)
-            {
-                try
-                {
-                    string stat = args[0].ToLower();
-                    int amount = int.Parse(args[1]);
-                    switch (stat)
-                    {
-                        case "health":
-                        case "hp":
-                            player.Stats[0] = amount;
-                            break;
-                        case "mana":
-                        case "mp":
-                            player.Stats[1] = amount;
-                            break;
-                        case "atk":
-                        case "attack":
-                            player.Stats[2] = amount;
-                            break;
-                        case "def":
-                        case "defence":
-                            player.Stats[3] = amount;
-                            break;
-                        case "spd":
-                        case "speed":
-                            player.Stats[4] = amount;
-                            break;
-                        case "vit":
-                        case "vitality":
-                            player.Stats[5] = amount;
-                            break;
-                        case "wis":
-                        case "wisdom":
-                            player.Stats[6] = amount;
-                            break;
-                        case "dex":
-                        case "dexterity":
-                            player.Stats[7] = amount;
-                            break;
-                        default:
-                            player.SendError("Invalid Stat");
-                            player.SendHelp("Stats: Health, Mana, Attack, Defence, Speed, Vitality, Wisdom, Dexterity");
-                            player.SendHelp("Shortcuts: Hp, Mp, Atk, Def, Spd, Vit, Wis, Dex");
-                            return false;
-                    }
-                    player.SaveToCharacter();
-                    player.Client.Save();
-                    player.UpdateCount++;
-                    player.SendInfo("Success");
-                }
-                catch
-                {
-                    player.SendError("Error while setting stat");
-                    return false;
-                }
-                return true;
-            }
-            else if (args.Length == 3)
-            {
-                foreach (Client i in player.Manager.Clients.Values)
-                {
-                    if (i.Account.Name.EqualsIgnoreCase(args[0]))
-                    {
-                        try
-                        {
-                            string stat = args[1].ToLower();
-                            int amount = int.Parse(args[2]);
-                            switch (stat)
-                            {
-                                case "health":
-                                case "hp":
-                                    i.Player.Stats[0] = amount;
-                                    break;
-                                case "mana":
-                                case "mp":
-                                    i.Player.Stats[1] = amount;
-                                    break;
-                                case "atk":
-                                case "attack":
-                                    i.Player.Stats[2] = amount;
-                                    break;
-                                case "def":
-                                case "defence":
-                                    i.Player.Stats[3] = amount;
-                                    break;
-                                case "spd":
-                                case "speed":
-                                    i.Player.Stats[4] = amount;
-                                    break;
-                                case "vit":
-                                case "vitality":
-                                    i.Player.Stats[5] = amount;
-                                    break;
-                                case "wis":
-                                case "wisdom":
-                                    i.Player.Stats[6] = amount;
-                                    break;
-                                case "dex":
-                                case "dexterity":
-                                    i.Player.Stats[7] = amount;
-                                    break;
-                                default:
-                                    player.SendError("Invalid Stat");
-                                    player.SendHelp("Stats: Health, Mana, Attack, Defence, Speed, Vitality, Wisdom, Dexterity");
-                                    player.SendHelp("Shortcuts: Hp, Mp, Atk, Def, Spd, Vit, Wis, Dex");
-                                    return false;
-                            }
-                            i.Player.SaveToCharacter();
-                            i.Player.Client.Save();
-                            i.Player.UpdateCount++;
-                            player.SendInfo("Success");
-                        }
-                        catch
-                        {
-                            player.SendError("Error while setting stat");
-                            return false;
-                        }
-                        return true;
-                    }
-                }
-                player.SendError(string.Format("Player '{0}' could not be found!", args));
-                return false;
-            }
-            else
-            {
-                player.SendHelp("Usage: /setStat <Stat> <Amount>");
-                player.SendHelp("or");
-                player.SendHelp("Usage: /setStat <Player> <Stat> <Amount>");
-                player.SendHelp("Shortcuts: Hp, Mp, Atk, Def, Spd, Vit, Wis, Dex");
-                return false;
-            }
-        }
-    }
-
-    internal class SetpieceCommand : Command
-    {
-        public SetpieceCommand()
-            : base("setpiece", 1)
-        {
-        }
-
-        protected override bool Process(Player player, RealmTime time, string[] args)
-        {
-            ISetPiece piece = (ISetPiece)Activator.CreateInstance(Type.GetType(
-                "wServer.realm.setpieces." + args[0], true, true));
-            piece.RenderSetPiece(player.Owner, new IntPoint((int)player.X + 1, (int)player.Y + 1));
-            return true;
-        }
-    }
-
     internal class ListCommands : Command
     {
-        public ListCommands() : base("commands", permLevel: 1) { }
-
+        public ListCommands() : base("commands", permLevel: 1) 
+        { 
+        }
         protected override bool Process(Player player, RealmTime time, string[] args)
         {
             Dictionary<string, Command> cmds = new Dictionary<string, Command>();
