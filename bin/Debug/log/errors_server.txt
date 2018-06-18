@@ -1,0 +1,768 @@
+2018-06-17 06:47:25,465 [Entry] WARN  db.data.XmlData - 0x0065 and 0x0061 has the same name of Grey Circle!
+2018-06-17 07:10:50,295 [7] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 08:23:37,905 [19] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 08:23:39,498 [18] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.app.getLanguageStrings.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 08:23:43,827 [19] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 08:23:44,373 [7] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.app.getLanguageStrings.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 08:25:01,811 [19] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 08:27:42,155 [19] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 09:15:58,030 [23] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-17 09:58:52,623 [8] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 09:58:52,702 [8] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 09:58:52,795 [8] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 09:58:52,905 [8] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 09:58:52,998 [8] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 09:58:53,092 [8] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 09:58:53,202 [8] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 09:58:53,311 [8] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 09:58:53,405 [8] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 09:58:53,498 [8] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 10:21:04,483 [8] ERROR Server - System.Net.HttpListenerException (0x80004005): The specified network name is no longer available
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.app.getLanguageStrings.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 10:21:04,514 [17] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 10:54:13,373 [8] ERROR Server - System.Net.HttpListenerException (0x80004005): The specified network name is no longer available
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 10:56:02,577 [8] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 10:58:24,623 [3] ERROR Server - System.Net.HttpListenerException (0x80004005): The specified network name is no longer available
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:20:58,405 [12] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:26:52,874 [26] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:58:55,264 [26] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:58:55,452 [26] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:58:55,655 [26] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:58:55,858 [26] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:58:56,045 [26] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:58:56,248 [26] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:58:56,436 [26] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:58:56,639 [26] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:58:56,827 [26] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 11:58:57,030 [26] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:48:53,295 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:48:53,702 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:48:53,998 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:48:54,186 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:48:54,389 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:48:54,577 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:48:54,764 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:48:54,967 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:48:55,170 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:48:55,358 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:58:49,686 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:58:49,905 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:58:50,108 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:58:50,311 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:58:50,514 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:58:50,717 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:58:50,920 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:58:51,123 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:58:51,327 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 12:58:51,530 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 13:06:27,608 [37] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-17 14:09:03,045 [32] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.app.getLanguageStrings.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 14:09:05,561 [17] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 14:16:16,780 [35] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 14:16:17,045 [32] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.app.getLanguageStrings.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 14:30:12,748 [32] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 14:40:18,358 [32] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-17 14:42:52,702 [36] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 14:44:00,342 [23] ERROR Server - System.Net.HttpListenerException (0x80004005): The specified network name is no longer available
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 14:49:57,123 [7] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 14:49:57,717 [28] ERROR Server - System.InvalidOperationException: There was an error generating the XML document. ---> System.Net.HttpListenerException: The specified network name is no longer available
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at System.Xml.XmlUtf8RawTextWriter.FlushBuffer()
+   at System.Xml.XmlUtf8RawTextWriter.WriteAttributeTextBlock(Char* pSrc, Char* pSrcEnd)
+   at System.Xml.XmlUtf8RawTextWriter.WriteString(String text)
+   at System.Xml.XmlWellFormedWriter.WriteString(String text)
+   at System.Xml.Serialization.XmlSerializationWriter.WriteAttribute(String localName, String ns, String value)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationWriterChars.Write15_ItemCostItem(String n, String ns, ItemCostItem o, Boolean isNullable, Boolean needType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationWriterChars.Write17_Chars(String n, String ns, Chars o, Boolean isNullable, Boolean needType)
+   at Microsoft.Xml.Serialization.GeneratedAssembly.XmlSerializationWriterChars.Write18_Chars(Object o)
+   --- End of inner exception stack trace ---
+   at System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces, String encodingStyle, String id)
+   at System.Xml.Serialization.XmlSerializer.Serialize(XmlWriter xmlWriter, Object o, XmlSerializerNamespaces namespaces)
+   at server.char.list.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:18:55,842 [34] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:18:56,014 [34] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:18:56,170 [34] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:18:56,342 [34] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:18:56,514 [34] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:18:56,686 [34] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:18:56,858 [34] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:18:57,030 [34] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:18:57,202 [34] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:18:57,373 [34] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:28:54,405 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:28:54,467 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:28:54,545 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:28:54,608 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:28:54,686 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:28:54,748 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:28:54,827 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:28:54,889 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:28:54,967 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:28:55,030 [33] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:59:04,280 [10] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:59:04,561 [10] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:59:04,842 [10] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:59:05,123 [10] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:59:05,405 [10] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:59:05,686 [10] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:59:05,952 [10] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:59:06,233 [10] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:59:06,514 [10] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 16:59:06,795 [10] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 20:28:54,311 [41] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 20:28:54,467 [41] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 20:28:54,623 [41] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 20:28:54,780 [41] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 20:28:54,920 [41] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 20:28:55,077 [41] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 20:28:55,233 [41] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 20:28:55,373 [41] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 20:28:55,530 [41] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 20:28:55,686 [41] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 23:29:00,076 [57] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 23:29:00,202 [57] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 23:29:00,342 [57] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 23:29:00,483 [57] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 23:29:00,623 [57] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 23:29:00,764 [57] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 23:29:00,905 [57] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 23:29:01,045 [57] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 23:29:01,170 [57] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-17 23:29:01,327 [57] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 00:08:51,420 [25] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 00:08:51,592 [25] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 00:08:51,764 [25] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 00:08:51,920 [25] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 00:08:52,092 [25] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 00:08:52,264 [25] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 00:08:52,436 [25] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 00:08:52,592 [25] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 00:08:52,764 [25] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 00:08:52,936 [25] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 02:32:46,327 [81] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 02:32:46,467 [81] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 02:32:46,608 [81] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 02:32:46,764 [81] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 02:32:46,905 [81] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 02:32:47,045 [81] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 02:32:47,202 [81] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 02:32:47,342 [81] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 02:32:47,483 [81] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 02:32:47,623 [81] ERROR Server - System.NotSupportedException: The given path's format is not supported.
+   at System.Security.Permissions.FileIOPermission.EmulateFileIOPermissionChecks(String fullPath)
+   at System.Security.Permissions.FileIOPermission.QuickDemand(FileIOPermissionAccess access, String fullPath, Boolean checkForDuplicates, Boolean needFullPath)
+   at System.IO.FileInfo.Init(String fileName, Boolean checkHost)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 07:40:05,545 [107] ERROR Server - System.Net.HttpListenerException (0x80004005): The I/O operation has been aborted because of either a thread exit or an application request
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.sfx.Sfx.HandleRequest()
+   at server.RequestHandler.HandleRequest(HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 10:17:25,733 [50] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,733 [47] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,733 [37] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,733 [40] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [36] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [15] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [32] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [19] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [6] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [20] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [13] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [71] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [52] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,764 [49] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,733 [44] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [38] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [35] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [26] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [3] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:25,748 [51] ERROR Server - Not supported server detected: 
+Host: 216.244.65.221
+Port: 2050
+2018-06-18 10:17:46,045 [96] ERROR Server - System.Net.HttpListenerException (0x80004005): An operation was attempted on a nonexistent network connection
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.Program.SendFile(String path, HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 10:17:46,202 [92] ERROR Server - System.Net.HttpListenerException (0x80004005): An operation was attempted on a nonexistent network connection
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.Program.SendFile(String path, HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 10:17:46,577 [91] ERROR Server - System.Net.HttpListenerException (0x80004005): An operation was attempted on a nonexistent network connection
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.Program.SendFile(String path, HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 10:17:53,076 [16] ERROR Server - System.Net.HttpListenerException (0x80004005): An operation was attempted on a nonexistent network connection
+   at System.Net.HttpResponseStream.Write(Byte[] buffer, Int32 offset, Int32 size)
+   at server.Program.SendFile(String path, HttpListenerContext context)
+   at server.Program.ProcessRequest(HttpListenerContext context)
+2018-06-18 10:18:01,545 [Entry] WARN  db.data.XmlData - 0x0065 and 0x0061 has the same name of Grey Circle!

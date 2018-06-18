@@ -233,8 +233,8 @@ namespace wServer.logic
                     new TierLoot(2, ItemType.Potion, 0.07)
                     ),
                 new Threshold(0.03,
-                    new ItemLoot("Crystal Wand", 0.005),
-                    new ItemLoot("Crystal Sword", 0.006)
+                    new ItemLoot("Crystal Wand", 0.01),
+                    new ItemLoot("Crystal Sword", 0.011)
                     )
             )
             .Init("Crystal Prisoner Clone",

@@ -1,10 +1,10 @@
 ﻿<Properties StartupConfiguration="{2ADA25D1-158E-4E88-B91B-F79981372136}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="server/server.cfg">
+  <MonoDevelop.Ide.Workbench ActiveDocument="wServer/realm/worlds/Nexus.cs">
     <Files>
-      <File FileName="wServer/realm/entities/player/Player.cs" Line="346" Column="1" />
-      <File FileName="wServer/realm/RealmManager.cs" Line="265" Column="42" />
-      <File FileName="wServer/realm/commands/AdminCommands.cs" Line="16" Column="1" />
-      <File FileName="server/server.cfg" Line="24" Column="23" />
+      <File FileName="wServer/logic/db/BehaviorDb.Tomb.cs" Line="18" Column="32" />
+      <File FileName="wServer/logic/behaviors/Orbit.cs" Line="14" Column="44" />
+      <File FileName="wServer/realm/Oryx.cs" Line="222" Column="10" />
+      <File FileName="wServer/realm/worlds/Nexus.cs" Line="54" Column="10" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -1,0 +1,17 @@
+2018-06-17 06:47:25,480 [Entry] WARN  db.data.XmlData - 0x0065 and 0x0061 has the same name of Grey Circle!
+2018-06-17 06:49:31,920 [Logic] ERROR wServer.realm.commands.Command - Error when executing the command.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.realm.commands.Realm.Process(Player player, RealmTime time, String[] args)
+   at wServer.realm.commands.Command.Execute(Player player, RealmTime time, String args)
+2018-06-17 06:49:33,920 [Logic] ERROR wServer.realm.commands.Command - Error when executing the command.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.realm.commands.Realm.Process(Player player, RealmTime time, String[] args)
+   at wServer.realm.commands.Command.Execute(Player player, RealmTime time, String args)
+2018-06-17 06:54:43,077 [Logic] ERROR wServer.realm.commands.Command - Error when executing the command.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at wServer.realm.commands.Realm.Process(Player player, RealmTime time, String[] args)
+   at wServer.realm.commands.Command.Execute(Player player, RealmTime time, String args)
+2018-06-17 09:16:00,920 [Entry] WARN  db.data.XmlData - 0x0065 and 0x0061 has the same name of Grey Circle!
+2018-06-17 13:06:33,623 [Entry] WARN  db.data.XmlData - 0x0065 and 0x0061 has the same name of Grey Circle!
+2018-06-17 14:40:22,811 [Entry] WARN  db.data.XmlData - 0x0065 and 0x0061 has the same name of Grey Circle!
+2018-06-18 10:17:29,280 [Entry] WARN  db.data.XmlData - 0x0065 and 0x0061 has the same name of Grey Circle!

@@ -18,6 +18,7 @@ namespace wServer.realm.worlds
             ClientWorldName = "Abyss of Demons";
             Dungeon = true;
             Background = 0;
+            Difficulty = 4;
             AllowTeleport = true;
         }
 
