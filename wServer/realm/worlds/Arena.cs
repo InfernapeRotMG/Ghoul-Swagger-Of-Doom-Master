@@ -90,12 +90,6 @@ namespace wServer.realm.worlds
 
         private void Spawn()
         {
-            /*
-             * if(wave % 5 == 0)
-             * {
-             *      nextDifficulty();
-             * }
-             */
             try
             {
                 List<string> enems = new List<string>();
@@ -129,26 +123,6 @@ namespace wServer.realm.worlds
                 Log.Error(ex);
             }
         }
-
-        //private void SpawnBosses()
-        //{
-        //    List<string> enems = new List<string>();
-        //    Random r = new Random();
-        //    for (int i = 0; i < (1); i++)
-        //    {
-        //        enems.Add(Bosses[r.Next(0, Bosses.Length)]);
-        //    }
-        //    Random r2 = new Random();
-        //    foreach (string i in enems)
-        //    {
-        //        ushort id = Manager.GameData.IdToObjectType[i];
-        //        int xloc = r2.Next(10, Map.Width) - 6;
-        //        int yloc = r2.Next(10, Map.Height) - 6;
-        //        Entity enemy = Entity.Resolve(Manager, id);
-        //        enemy.Move(xloc, yloc);
-        //        EnterWorld(enemy);
-        //    }
-        //}
 
         private bool CheckPopulation()
         {

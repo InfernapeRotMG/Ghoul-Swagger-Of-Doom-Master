@@ -13,8 +13,8 @@ namespace wServer.realm.worlds
             Name = "Belladonna's Garden";
             ClientWorldName = "Belladonna's Garden";
             Background = 0;
-            AllowTeleport = false;
-            Difficulty = 5;
+            AllowTeleport = false;            
+            Difficulty = 1;
         }
 
         protected override void Init()

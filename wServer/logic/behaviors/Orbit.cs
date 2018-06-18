@@ -40,14 +40,6 @@ namespace wServer.logic.behaviors
 
         protected override void TickCore(Entity host, RealmTime time, ref object state)
         {
-            //var en = host.GetNearestEntity(20, null);
-            //var player = en as Player;
-
-            //if (en == null)
-            //{
-            //    return;
-            //}
-
             OrbitState s = (OrbitState) state;
 
             Status = CycleStatus.NotStarted;

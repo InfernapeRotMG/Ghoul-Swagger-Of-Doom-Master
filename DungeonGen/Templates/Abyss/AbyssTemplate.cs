@@ -1,24 +1,4 @@
-﻿/*
-    Copyright (C) 2015 creepylava
-
-    This file is part of RotMG Dungeon Generator.
-
-    RotMG Dungeon Generator is free software: you can redistribute it and/or modify
-    it under the terms of the GNU Affero General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.
-
-    This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU Affero General Public License for more details.
-
-    You should have received a copy of the GNU Affero General Public License
-    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-*/
-
-using System;
+﻿using System;
 using DungeonGenerator.Dungeon;
 using RotMG.Common;
 
@@ -27,7 +7,6 @@ namespace DungeonGenerator.Templates.Abyss {
 		internal static readonly TileType RedSmallChecks = new TileType(0x003c, "Red Small Checks");
 		internal static readonly TileType Lava = new TileType(0x0070, "Lava");
 		internal static readonly TileType Space = new TileType(0x00fe, "Space");
-
 		internal static readonly ObjectType RedWall = new ObjectType(0x0150, "Red Wall");
 		internal static readonly ObjectType RedTorchWall = new ObjectType(0x0151, "Red Torch Wall");
 		internal static readonly ObjectType PartialRedFloor = new ObjectType(0x0153, "Partial Red Floor");

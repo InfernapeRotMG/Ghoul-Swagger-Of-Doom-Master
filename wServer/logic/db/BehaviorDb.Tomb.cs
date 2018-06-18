@@ -15,7 +15,7 @@ namespace wServer.logic
                     new State("idle",
                         new Taunt("THIS WILL NOW BE YOUR TOMB!"),
                         new ConditionalEffect(ConditionEffectIndex.Armored),
-                        new Orbit(.6, 5, target: "Tomb Boss Anchor", radiusVariance: 0.5),
+                        new Orbit(0.6, 5, target: "Tomb Boss Anchor", radiusVariance: 0.5),
                         new HpLessTransition(.99, "weakning")
                         ),
                     new State("weakning",

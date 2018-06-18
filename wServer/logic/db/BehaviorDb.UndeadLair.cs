@@ -433,11 +433,11 @@ namespace wServer.logic
                         )
                     )
                 ),
-                new Threshold(0.32, /* Maximum 3 wis, minimum 0 wis */
+                new Threshold(0.32,
                     new ItemLoot("Potion of Wisdom", 1)
                 ),
                 new Threshold(0.1,
-                    new ItemLoot("Bow of the Morning Star", 0.01),
+                    new ItemLoot("Bow of the Morning Star", 0.005),
                     new ItemLoot("Doom Bow", 0.005),
                     new ItemLoot("Wine Cellar Incantation", 0.005),
                     new TierLoot(3, ItemType.Ring, 0.2),

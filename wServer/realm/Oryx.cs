@@ -221,6 +221,7 @@ namespace wServer.realm
         public bool CheckFinalQuests()
         {
             if (CountEnemies(
+            "Lich", "Actual Lich",
                 "Skull Shrine", "Cube God", "Grand Sphinx", "Hermit God", "Ghost Ship", "Lord of the Lost Lands") != 0) return false;
             RealmClosed = true;
             return true;

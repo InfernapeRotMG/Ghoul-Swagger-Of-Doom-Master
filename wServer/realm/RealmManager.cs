@@ -202,8 +202,8 @@ namespace wServer.realm
                     if ((dummy = i.Value.GetUniqueNamedPlayerRough(name)) != null)
                         return dummy;
             return null;
-        }        
-        
+        }
+
         public World GetWorld(int id)
         {
             World ret;

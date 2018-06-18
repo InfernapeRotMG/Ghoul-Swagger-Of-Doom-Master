@@ -522,7 +522,7 @@ public class Item : IFeedable
             Timer = (n = elem.Element("Timer")) != null ? float.Parse(elem.Element("Timer").Value) : null as float?;
             XpBooster = elem.Element("XpBoost") != null;
             LootDropBooster = elem.Element("LDBoosted") != null;
-            LootTierBooster = elem.Element("LTBoosted") != null;
+            LootTierBooster = elem.Element("LTBoosted") != null;            
         }
         catch (Exception ex)
         {
@@ -534,7 +534,7 @@ public class Item : IFeedable
     public ushort ObjectType { get; private set; }
     public string ObjectId { get; private set; }
     public int SlotType { get; private set; }
-    public ushort FeedPower { get; set; }
+    public int FeedPower { get; set; }
     public int Tier { get; private set; }
     public string Description { get; private set; }
     public float RateOfFire { get; private set; }
